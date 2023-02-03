@@ -25,8 +25,8 @@ const PostList = () => {
   if (status === 'loading') {
     content = <p>Loading....</p>;
   } else if (status === 'succeed') {
-    content = orderedPostsIds.map((post) => (
-      <PostsExcerpt key={post} post={post} />
+    content = orderedPostsIds.map((postId) => (
+      <PostsExcerpt key={postId} postId={postId} />
     ));
   } else if (status === 'failed') {
     content = <p>{error}</p>;
